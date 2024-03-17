@@ -5,14 +5,14 @@ from pymongo.server_api import ServerApi
 import pandas as pd
 
 # MongoDB Atlas connection string
-connection_string = "mongodb+srv://vigneshd:Tn12*au8950@vignesh.ruekie1.mongodb.net/?retryWrites=true&w=majority&appName=vignesh"
+connection_string = "<connection string>"
 
 # Create a new client and connect to the server
 client = MongoClient(connection_string, server_api=ServerApi('1'), tlsCAFile=certifi.where())
 
 # Access your database and collection
-db = client["sample_airbnb"]
-collection = db["listingsAndReviews"]
+db = client["<DB>"]
+collection = db["<collection>"]
 
 # Retrieve data from MongoDB and convert it to a Pandas DataFrame
 data = list(collection.find({}))
